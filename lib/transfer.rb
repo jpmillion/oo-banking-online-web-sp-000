@@ -33,7 +33,7 @@ class Transfer
   end
     
   def reverse_transfer
-    binding.pry
+    #binding.pry
     trans = @@transactions.detect {|transaction| transaction.id == self.id}
     if trans && trans.status == 'complete'
       trans.sender.balance += trans.amount
